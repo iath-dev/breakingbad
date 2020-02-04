@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Container } from './components';
+import Phrase from './container/phrase';
 
 function App() {
   
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <Container>
+      <Phrase phrase={phrase} />
       <Button onClick={consultApi}>
         Obtener Frase
       </Button>
