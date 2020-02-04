@@ -1,8 +1,18 @@
 import React from 'react';
+import { Button, Container } from './components';
 
 function App() {
+
+  const consultApi = () => {
+    console.log('Consultando....');
+  }
+
   return (
-    <h1>Breaking Bad</h1>
+    <Container>
+      <Button onClick={consultApi}>
+        Obtener Frase
+      </Button>
+    </Container>
   );
 }
 
