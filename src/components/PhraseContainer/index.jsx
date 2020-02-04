@@ -5,7 +5,7 @@ export default styled.div`
     border-radius: .5rem;
     background-color: #fff;
     max-width: 800px;
-    margin-top: 5rem;
+    margin-top: 8rem;
     
     @media (min-width: 992px): {
         margin-top: 10rem;

@@ -6,16 +6,20 @@ function App() {
   
   const [phrase, setPhrase] = React.useState({});
 
-  const consultApi = async () => {
+  const getPhrase = async () => {
     const api = await fetch('https://breaking-bad-quotes.herokuapp.com/v1/quotes');
     const result = await api.json()
     setPhrase(result[0]);
   }
 
+  React.useEffect(() => {
+    getPhrase();
+  }, [])
+
   return (
     <Container>
       <Phrase phrase={phrase} />
-      <Button onClick={consultApi}>
+      <Button onClick={getPhrase}>
         Obtener Frase
       </Button>
     </Container>
