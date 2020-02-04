@@ -1,13 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { PhraseContainer } from '../components';
 
 const Phrase = ({ phrase }) => {
+
+    if (Object.keys(phrase).length === 0) return null;
+
     return (
         <>
-            <div>
+            <PhraseContainer>
                 <h1>{ phrase.quote }</h1>
                 <p>- { phrase.author }</p>
-            </div>
+            </PhraseContainer>
         </>
     )
 }
@@ -20,10 +24,7 @@ Phrase.proTypes = {
 }
 
 Phrase.defaultProps = {
-    phrase: {
-        quote: '',
-        author: '',
-    }
+    phrase: null,
 }
 
 export default Phrase;
